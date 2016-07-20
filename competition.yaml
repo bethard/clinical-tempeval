@@ -26,6 +26,8 @@ phases:
         max_submissions: 2
         scoring_program: c4819120-18a2-4466-9c82-f51cbbe8b667
 
+anonymous_leaderboard: true
+
 leaderboard:
 
     leaderboards:
