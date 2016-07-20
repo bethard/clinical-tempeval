@@ -1,0 +1,262 @@
+title: "SemEval 2017 Task 12: Clinical TempEval"
+
+html: 
+    overview: empty.html
+    evaluation: empty.html
+    terms: empty.html
+    data: empty.html
+
+phases:
+    1:
+        phasenumber: 1
+        label: "Trial"
+        start_date: 2016-06-01
+    2:
+        phasenumber: 2
+        label: "Unsupervised Domain Adaptation"
+        start_date: 2017-01-09
+        max_submissions: 2
+    3:
+        phasenumber: 3
+        label: "Supervised Domain Adaptation"
+        start_date: 2017-01-16
+        max_submissions: 2
+
+leaderboard:
+
+    leaderboards:
+        All Annotations: &ALL
+            label: All Annotations
+            rank: 1
+        Times: &TIME
+            label: Times
+            rank: 2
+        Events: &EVENT
+            label: Events
+            rank: 3
+        Temporal Relations: &RELATION
+            label: Temporal Relations
+            rank: 4
+
+    column_groups:
+        Span + all properties: &FULL
+            label: Span + all properties
+        Span only: &SPAN
+            label: Span only
+        Span + Class: &CLASS
+            label: Span + Class
+        Span + Modality: &MODALITY
+            label: Span + Modality
+        Span + Degree: &DEGREE
+            label: Span + Degree
+        Span + Polarity: &POLARITY
+            label: Span + Polarity
+        Span + Type: &TYPE
+            label: Span + Type
+        Narrative Container: &CONTAINS
+            label: Narrative Container
+        Document Time: &DOCTIME
+            label: Document Time
+
+    columns:
+        ALL_f1:
+            leaderboard: *ALL
+            column_group: *FULL
+            label: F1
+            rank: 1
+        ALL_precision:
+            leaderboard: *ALL
+            column_group: *FULL
+            label: P
+            rank: 2
+        ALL_recall:
+            leaderboard: *ALL
+            column_group: *FULL
+            label: R
+            rank: 3
+        ALL_SPAN_f1:
+            leaderboard: *ALL
+            column_group: *SPAN
+            label: F1
+            rank: 4
+        ALL_SPAN_precision:
+            leaderboard: *ALL
+            column_group: *SPAN
+            label: P
+            rank: 5
+        ALL_SPAN_recall:
+            leaderboard: *ALL
+            column_group: *SPAN
+            label: R
+            rank: 6
+
+        # times
+        TIMEX3_f1:
+            leaderboard: *TIME
+            column_group: *FULL
+            label: F1
+            rank: 1
+        TIMEX3_precision:
+            leaderboard: *TIME
+            column_group: *FULL
+            label: P
+            rank: 2
+        TIMEX3_recall:
+            leaderboard: *TIME
+            column_group: *FULL
+            label: R
+            rank: 3
+        TIMEX3_SPAN_f1:
+            leaderboard: *TIME
+            column_group: *SPAN
+            label: F1
+            rank: 4
+        TIMEX3_SPAN_precision:
+            leaderboard: *TIME
+            column_group: *SPAN
+            label: P
+            rank: 5
+        TIMEX3_SPAN_recall:
+            leaderboard: *TIME
+            column_group: *SPAN
+            label: R
+            rank: 6
+        TIMEX3_Class_f1:
+            leaderboard: *TIME
+            column_group: *CLASS
+            label: F1
+            rank: 7
+        TIMEX3_Class_precision:
+            leaderboard: *TIME
+            column_group: *CLASS
+            label: P
+            rank: 8
+        TIMEX3_Class_recall:
+            leaderboard: *TIME
+            column_group: *CLASS
+            label: R
+            rank: 9
+
+        # events
+        EVENT_f1:
+            leaderboard: *EVENT
+            column_group: *FULL
+            label: F1
+            rank: 1
+        EVENT_precision:
+            leaderboard: *EVENT
+            column_group: *FULL
+            label: P
+            rank: 2
+        EVENT_recall:
+            leaderboard: *EVENT
+            column_group: *FULL
+            label: R
+            rank: 3
+        EVENT_SPAN_f1:
+            leaderboard: *EVENT
+            column_group: *SPAN
+            label: F1
+            rank: 4
+        EVENT_SPAN_precision:
+            leaderboard: *EVENT
+            column_group: *SPAN
+            label: P
+            rank: 5
+        EVENT_SPAN_recall:
+            leaderboard: *EVENT
+            column_group: *SPAN
+            label: R
+            rank: 6
+        EVENT_ContextualModality_f1:
+            leaderboard: *EVENT
+            column_group: *MODALITY
+            label: F1
+            rank: 7
+        EVENT_ContextualModality_precision:
+            leaderboard: *EVENT
+            column_group: *MODALITY
+            label: P
+            rank: 8
+        EVENT_ContextualModality_recall:
+            leaderboard: *EVENT
+            column_group: *MODALITY
+            label: R
+            rank: 9
+        EVENT_Degree_f1:
+            leaderboard: *EVENT
+            column_group: *DEGREE
+            label: F1
+            rank: 10
+        EVENT_Degree_precision:
+            leaderboard: *EVENT
+            column_group: *DEGREE
+            label: P
+            rank: 11
+        EVENT_Degree_recall:
+            leaderboard: *EVENT
+            column_group: *DEGREE
+            label: R
+            rank: 12
+        EVENT_Polarity_f1:
+            leaderboard: *EVENT
+            column_group: *POLARITY
+            label: F1
+            rank: 13
+        EVENT_Polarity_precision:
+            leaderboard: *EVENT
+            column_group: *POLARITY
+            label: P
+            rank: 14
+        EVENT_Polarity_recall:
+            leaderboard: *EVENT
+            column_group: *POLARITY
+            label: R
+            rank: 15
+        EVENT_Type_f1:
+            leaderboard: *EVENT
+            column_group: *TYPE
+            label: F1
+            rank: 16
+        EVENT_Type_precision:
+            leaderboard: *EVENT
+            column_group: *TYPE
+            label: P
+            rank: 17
+        EVENT_Type_recall:
+            leaderboard: *EVENT
+            column_group: *TYPE
+            label: R
+            rank: 18
+
+        # temporal relations
+        EVENT_DocTimeRel_f1:
+            leaderboard: *RELATION
+            column_group: *DOCTIME
+            label: F1
+            rank: 4
+        EVENT_DocTimeRel_precision:
+            leaderboard: *RELATION
+            column_group: *DOCTIME
+            label: P
+            rank: 5
+        EVENT_DocTimeRel_recall:
+            leaderboard: *RELATION
+            column_group: *DOCTIME
+            label: R
+            rank: 6
+        TLINK_Type_CONTAINS_f1:
+            leaderboard: *RELATION
+            column_group: *CONTAINS
+            label: F1
+            rank: 1
+        TLINK_Type_CONTAINS_precision:
+            leaderboard: *RELATION
+            column_group: *CONTAINS
+            label: P
+            rank: 2
+        TLINK_Type_CONTAINS_recall:
+            leaderboard: *RELATION
+            column_group: *CONTAINS
+            label: R
+            rank: 3
