@@ -11,16 +11,20 @@ phases:
         phasenumber: 1
         label: "Trial"
         start_date: 2016-06-01
+        scoring_program: c4819120-18a2-4466-9c82-f51cbbe8b667
+        reference_data: 542e4557-9170-48c5-83e2-110921bcab45
     2:
         phasenumber: 2
         label: "Unsupervised Domain Adaptation"
         start_date: 2017-01-09
         max_submissions: 2
+        scoring_program: c4819120-18a2-4466-9c82-f51cbbe8b667
     3:
         phasenumber: 3
         label: "Supervised Domain Adaptation"
         start_date: 2017-01-16
         max_submissions: 2
+        scoring_program: c4819120-18a2-4466-9c82-f51cbbe8b667
 
 leaderboard:
 
