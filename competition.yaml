@@ -1,10 +1,10 @@
 title: "SemEval 2017 Task 12: Clinical TempEval"
 
-html: 
-    overview: empty.html
-    evaluation: empty.html
+html:
+    overview: overview.html
+    evaluation: evaluation.html
     terms: empty.html
-    data: empty.html
+    data: data.html
 
 has_registration: True
 

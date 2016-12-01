@@ -1,0 +1,124 @@
+<p>
+	Participants in Clinical TempEval may participate in any or all of the 6 tasks (TS, ES, TA, EA, DR, CR). The evaluation metrics that will be applied are:</p>
+<ul>
+	<li>
+		TS, ES: precision, recall and F1</li>
+	<li>
+		TA, EA: precision, recall and F1 for each attribute</li>
+	<li>
+		DR: precision, recall and F1</li>
+	<li>
+		CR: precision, recall and F1, and closure-based precision, recall and F1, where temporal closure is run to infer additional relations on both the system and the reference relations and scores are calculated on the post-closure relations.</li>
+</ul>
+<p>
+	The focus of Clinical TempEval 2017 is on domain adaptation from a source domain (colon cancer) to a target domain (brain cancer). To allow the evaluation of both unsupervised and semi-supervised approaches to domain adaptation, Clinical TempEval 2017 will have multiple evaluation phases:</p>
+<ol>
+  <li>
+		Trial phase (identical to Clinical TempEval 2016):
+		<ul>
+			<li>
+				Training data:
+				<ul>
+					<li>
+						raw text from the train and dev sections of the source domain (colon cancer)</li>
+					<li>
+						annotations from the train and dev sections of the source domain (colon cancer)</li>
+				</ul>
+			</li>
+			<li>
+				Test data:
+				<ul>
+					<li>
+						raw text from the test section of the source domain (colon cancer)</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li>
+		Unsupervised domain adaptation phase:
+		<ul>
+			<li>
+				Training data:
+				<ul>
+					<li>
+						raw text from the source domain (colon cancer)</li>
+					<li>
+						annotations from the source domain (colon cancer)</li>
+					<li>
+						raw text from the target domain (brain cancer)</li>
+				</ul>
+			</li>
+			<li>
+				Test data:
+				<ul>
+					<li>
+						raw text from the target domain (brain cancer)</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li>
+		Semi-supervised domain adaptation phase:
+		<ul>
+			<li>
+				Training data:
+				<ul>
+					<li>
+						raw text from the source domain (colon cancer)</li>
+					<li>
+						annotations from the source domain (colon cancer)</li>
+					<li>
+						raw text from the target domain (brain cancer)</li>
+					<li>
+						annotations from the target domain (brain cancer)<br />
+						<strong>[only available during the evaluation period]</strong></li>
+				</ul>
+			</li>
+			<li>
+				Test data:
+				<ul>
+					<li>
+						raw text from the target domain (brain cancer)</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ol>
+<h3>
+	System Output Format</h3>
+<p>
+	The format of submissions is the same for both phase 1 and phase 2. Your system output should take the same format and organization as the Anafora XML files in the training data. Your directory structure should look like:</p>
+<ul>
+	<li>
+		ID004_clinic_010
+		<ul>
+			<li>
+				ID004_clinic_010.Temporal-Relation.system.completed.xml</li>
+		</ul>
+	</li>
+	<li>
+		ID004_clinic_012
+		<ul>
+			<li>
+				ID004_clinic_012.Temporal-Relation.system.completed.xml</li>
+		</ul>
+	</li>
+	<li>
+		ID004_path_011
+		<ul>
+			<li>
+				ID004_path_011.Temporal-Relation.system.completed.xml</li>
+		</ul>
+	</li>
+	<li>
+		ID005_clinic_013
+		<ul>
+			<li>
+				ID005_clinic_013.Temporal-Relation.system.completed.xml</li>
+		</ul>
+	</li>
+	<li>
+		...
+  </li>
+</ul>
+<p>

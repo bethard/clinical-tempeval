@@ -1,0 +1,58 @@
+<h3>
+	Data Use Agreements</h3>
+<p>
+	All notes that are part of the Clinical TempEval corpus have been de-identified as much as possible while still leaving the dates intact. To access the source texts for the Clinical TempEval corpus, participants must agree to handle the data appropriately, formalized in the requirement that participants must sign a data use agreement with the Mayo Clinic. To request a data use agreement, please follow <a href="http://thyme.healthnlp.org/#Getting_access_to_the_THYME_corpus_and_gold_standard_annotations">the instructions at the THYME website</a>.</p>
+<p style="color: red;">
+	<b><i>Please apply for a data use agreement as soon as possible! The process may take some time.</i></b></p>
+<p>
+	Please read the DUA carefully before agreeing to it. Among other things, you will be agreeing:</p>
+<ul>
+	<li style="color: red;">
+		to keep the data secure using restricted passwords and encryption (e.g., on a secure server, not on personal computers)</li>
+	<li style="color: red;">
+		not to attempt to re-identify the data</li>
+	<li style="color: red;">
+		not to redistribute the data to anyone else for any purpose</li>
+</ul>
+<p>
+	Note: if you have already completed the data use agreement process (e.g., for Clinical TempEval 2015 or Clinical TempEval 2016), you do not need to complete it again for Clinical TempEval 2017. You already have the train.zip, dev.zip and test.zip files that you will need for the shared task.</p>
+<h3 style="margin-top: 1em;">
+	Releases of Source Text</h3>
+<p>
+	Once you have obtained a data use agreement, you will be given the THYME corpus, containing three zip archives: train.zip, dev.zip and test.zip. These contain the source texts for Clinical TempEval. The zip files are password protected; you should have received the passwords for them when you received the data. The data include:</p>
+<ul>
+	<li>
+		ID* files: These are the source texts for the source domain (colon cancer) training data.</li>
+	<li>
+		doc* files: These are the source texts for the target domain (brain cancer) test data.</li>
+</ul>
+<h3 id="Releases-of-Annotations" style="margin-top: 1em;">
+	Releases of Annotations</h3>
+<p>
+	The annotations for the Clinical TempEval data will be released on the <a href="https://github.com/stylerw/thymedata">THYME data Github account</a>. The following releases are currently available:</p>
+<ul>
+	<li>
+		Source domain training data: <a href="https://github.com/stylerw/thymedata/releases/tag/1.3.0%2Bcoloncancer-test">1.3.0+coloncancer-test</a>. This is the complete training, development, and test sets for Clinical TempEval 2016, including all the EVENT, TIMEX3, and TLINK annotations on the source domain (colon cancer) section of the THYME corpus.</li>
+</ul>
+<h3 style="margin-top: 1em;">
+	Corpus Annotation</h3>
+<p>
+	The Clinical TempEval corpus has been annotated using the <a href="http://clear.colorado.edu/compsem/documents/THYME%20Guidelines.pdf">guidelines for the annotation of times, events and temporal relations in clinical notes</a>, an extension of ISO TimeML developed by the <a href="http://thyme.healthnlp.org">THYME project</a>. A corpus of clinical notes and pathology reports from the Mayo Clinic was annotated as follows:</p>
+<ol>
+	<li>
+		Annotators identified time and event expressions, along with their attributes (except normalized values for time expressions)</li>
+	<li>
+		Adjudicators revised and finalized the time and event expressions and their attributes</li>
+	<li>
+		Annotators identified temporal relations between pairs of events and between events and times</li>
+	<li>
+		Adjudicators revised and finalize the temporal relations</li>
+</ol>
+<h3>
+	Data Format</h3>
+<p>
+	The Clinical TempEval data is in <a href="https://github.com/weitechen/anafora">Anafora</a> format. This means that for each file in the corpus, there will be a directory. That directory will contain a plain text file and an XML file. The XML file contains stand-off annotations indicating where each of the events, times and temporal relations have been identified in the text. For example, given the text:</p>
+<blockquote>
+	April 23, 2014: The patient did not have any postoperative bleeding so we will resume chemotherapy with a larger bolus on Friday even if there is slight nausea.</blockquote>
+<p>
+	The XML file will contain something like <a href="http://alt.qcri.org/semeval2015/task6/data/uploads/clinical-tempeval-example.xml">the Anafora file here</a>.</p>

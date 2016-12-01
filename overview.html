@@ -1,0 +1,131 @@
+<p>
+	Clinical TempEval 2017 follows in the footsteps of <a href="https://www.i2b2.org/NLP/TemporalRelations/">the i2b2 2012 shared task</a>, <a href="http://alt.qcri.org/semeval2015/task6/">Clinical TempEval 2015</a>, and <a href="http://alt.qcri.org/semeval2016/task12/">Clinical TempEval 2016</a> in bringing timeline extraction to the clinical domain. As in past Clinical TempEvals, data will be drawn from clinical notes and pathology reports for cancer patients at the Mayo Clinic.</p>
+<h3>
+	New in 2017</h3>
+<p>
+	This year, Clinical TempEval will focus on domain adaptation: systems will be trained on data from colon cancer patients, but will be asked to make predictions on brain cancer patients. Adapting to the many differences between the two domains will be a key challenge for the task.</p>
+<h3>
+	Subtasks</h3>
+<p>
+	Clinical TempEval systems will be asked to extract the following temporal information:</p>
+<ul>
+	<li>
+		TS: identifying the spans of time expressions</li>
+	<li>
+		ES: Identifying the spans of event expressions</li>
+	<li>
+		TA: identifying the attributes of time expressions
+		<ul>
+			<li>
+				type=DATE, TIME, DURATION, QUANTIFIER, PREPOSTEXP or SET</li>
+		</ul>
+	</li>
+	<li>
+		EA: identifying the attributes of event expressions
+		<ul>
+			<li>
+				type=N/A, ASPECTUAL or EVIDENTIAL</li>
+			<li>
+				polarity=POS or NEG</li>
+			<li>
+				degree=N/A, MOST or LITTLE</li>
+			<li>
+				modality=ACTUAL, HEDGED, HYPOTHETICAL or GENERIC</li>
+		</ul>
+	</li>
+	<li>
+		DR: identifying the relation between an event and the document creation time
+		<ul>
+			<li>
+				docTimeRel=BEFORE, OVERLAP,&nbsp;BEFORE-OVERLAP or AFTER</li>
+		</ul>
+	</li>
+	<li>
+		CR: identifying narrative container relations (CONTAINS a.k.a. INCLUDES)</li>
+</ul>
+<p>
+	For example, given the text:</p>
+<blockquote>
+	April 23, 2014: The patient did not have any postoperative bleeding so we will resume chemotherapy with a larger bolus on Friday even if there is slight nausea.</blockquote>
+<p>
+	Systems should identify:</p>
+<ul>
+	<li>
+		TS:
+		<ul>
+			<li>
+				April 23, 2014</li>
+			<li>
+				postoperative</li>
+			<li>
+				Friday</li>
+		</ul>
+	</li>
+	<li>
+		ES:
+		<ul>
+			<li>
+				bleeding</li>
+			<li>
+				resume</li>
+			<li>
+				chemotherapy</li>
+			<li>
+				bolus</li>
+			<li>
+				nausea</li>
+		</ul>
+	</li>
+	<li>
+		TA:
+		<ul>
+			<li>
+				April 23, 2014: type=DATE, value=2014-04-23</li>
+			<li>
+				postoperative: type=PREPOSTEXP</li>
+			<li>
+				Friday: type=DATE, value=2014-04-25</li>
+		</ul>
+	</li>
+	<li>
+		EA:
+		<ul>
+			<li>
+				bleeding: type=N/A, degree=N/A, polarity=NEG, modality=ACTUAL</li>
+			<li>
+				resume: type=ASPECTUAL, degree=N/A, polarity=POS, modality=ACTUAL</li>
+			<li>
+				chemotherapy: type=N/A, degree=N/A, polarity=POS, modality=ACTUAL</li>
+			<li>
+				bolus: type=N/A, degree=N/A, polarity=POS, modality=ACTUAL</li>
+			<li>
+				nausea: type=N/A,&nbsp;degree=LITTLE, polarity=POS,&nbsp;modality=HYPOTHETICAL</li>
+		</ul>
+	</li>
+	<li>
+		DR:
+		<ul>
+			<li>
+				bleeding BEFORE docTime</li>
+			<li>
+				resume AFTER docTime</li>
+			<li>
+				chemotherapy AFTER docTime</li>
+			<li>
+				bolus AFTER docTime</li>
+			<li>
+				nausea AFTER docTime</li>
+		</ul>
+	</li>
+	<li>
+		CR:
+		<ul>
+			<li>
+				postoperative CONTAINS bleeding</li>
+			<li>
+				Friday CONTAINS resume</li>
+			<li>
+				Friday CONTAINS bolus</li>
+		</ul>
+	</li>
+</ul>
