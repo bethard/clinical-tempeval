@@ -15,7 +15,6 @@ phases:
         phasenumber: 1
         label: "Trial"
         start_date: 2016-06-01
-        leaderboard_management_mode: hide_results
         scoring_program: c4819120-18a2-4466-9c82-f51cbbe8b667
         reference_data: 542e4557-9170-48c5-83e2-110921bcab45
     2:
