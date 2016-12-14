@@ -37,238 +37,237 @@ end_date: 2017-01-31
 leaderboard:
 
     leaderboards:
-        All Annotations: &ALL
-            label: All Annotations
+        All: &ALL
+            label: Results
             rank: 1
-        Times: &TIME
-            label: Times
-            rank: 2
-        Events: &EVENT
-            label: Events
-            rank: 3
-        Temporal Relations: &RELATION
-            label: Temporal Relations
-            rank: 4
 
     column_groups:
-        Span + all properties: &FULL
-            label: Span + all properties
-        Span only: &SPAN
-            label: Span only
-        Span + Class: &CLASS
-            label: Span + Class
-        Span + Modality: &MODALITY
-            label: Span + Modality
-        Span + Degree: &DEGREE
-            label: Span + Degree
-        Span + Polarity: &POLARITY
-            label: Span + Polarity
-        Span + Type: &TYPE
-            label: Span + Type
-        Narrative Container: &CONTAINS
-            label: Narrative Container
-        Document Time: &DOCTIME
-            label: Document Time
+        All span + all properties: &ALL_FULL
+            label: All spans + all properties
+        All span only: &ALL_SPAN
+            label: All spans only
+        Time Span + all properties: &TIME_FULL
+            label: Time span + all properties
+        Time Span only: &TIME_SPAN
+            label: Time span only
+        Event span + Class: &TIME_CLASS
+            label: Time span + Class
+        Event span + all properties: &EVENT_FULL
+            label: Event span + all properties
+        Event span only: &EVENT_SPAN
+            label: Event span only
+        Event span + Modality: &EVENT_MODALITY
+            label: Event span + Modality
+        Event span + Degree: &EVENT_DEGREE
+            label: Event span + Degree
+        Event span + Polarity: &EVENT_POLARITY
+            label: Event span + Polarity
+        Event span + Type: &EVENT_TYPE
+            label: Event span + Type
+        Relation Narrative Container: &RELATION_CONTAINS
+            label: Narrative Container Relation
+        Relation Document Time: &RELATION_DOCTIME
+            label: Document Time Relation
 
     columns:
         ALL_f1:
             leaderboard: *ALL
-            column_group: *FULL
+            column_group: *ALL_FULL
             label: F1
             rank: 1
         ALL_precision:
             leaderboard: *ALL
-            column_group: *FULL
+            column_group: *ALL_FULL
             label: P
             rank: 2
         ALL_recall:
             leaderboard: *ALL
-            column_group: *FULL
+            column_group: *ALL_FULL
             label: R
             rank: 3
         ALL_SPAN_f1:
             leaderboard: *ALL
-            column_group: *SPAN
+            column_group: *ALL_SPAN
             label: F1
             rank: 4
         ALL_SPAN_precision:
             leaderboard: *ALL
-            column_group: *SPAN
+            column_group: *ALL_SPAN
             label: P
             rank: 5
         ALL_SPAN_recall:
             leaderboard: *ALL
-            column_group: *SPAN
+            column_group: *ALL_SPAN
             label: R
             rank: 6
 
         # times
         TIMEX3_f1:
-            leaderboard: *TIME
-            column_group: *FULL
+            leaderboard: *ALL
+            column_group: *TIME_FULL
             label: F1
             rank: 1
         TIMEX3_precision:
-            leaderboard: *TIME
-            column_group: *FULL
+            leaderboard: *ALL
+            column_group: *TIME_FULL
             label: P
             rank: 2
         TIMEX3_recall:
-            leaderboard: *TIME
-            column_group: *FULL
+            leaderboard: *ALL
+            column_group: *TIME_FULL
             label: R
             rank: 3
         TIMEX3_SPAN_f1:
-            leaderboard: *TIME
-            column_group: *SPAN
+            leaderboard: *ALL
+            column_group: *TIME_SPAN
             label: F1
             rank: 4
         TIMEX3_SPAN_precision:
-            leaderboard: *TIME
-            column_group: *SPAN
+            leaderboard: *ALL
+            column_group: *TIME_SPAN
             label: P
             rank: 5
         TIMEX3_SPAN_recall:
-            leaderboard: *TIME
-            column_group: *SPAN
+            leaderboard: *ALL
+            column_group: *TIME_SPAN
             label: R
             rank: 6
         TIMEX3_Class_f1:
-            leaderboard: *TIME
-            column_group: *CLASS
+            leaderboard: *ALL
+            column_group: *TIME_CLASS
             label: F1
             rank: 7
         TIMEX3_Class_precision:
-            leaderboard: *TIME
-            column_group: *CLASS
+            leaderboard: *ALL
+            column_group: *TIME_CLASS
             label: P
             rank: 8
         TIMEX3_Class_recall:
-            leaderboard: *TIME
-            column_group: *CLASS
+            leaderboard: *ALL
+            column_group: *TIME_CLASS
             label: R
             rank: 9
 
         # events
         EVENT_f1:
-            leaderboard: *EVENT
-            column_group: *FULL
+            leaderboard: *ALL
+            column_group: *EVENT_FULL
             label: F1
             rank: 1
         EVENT_precision:
-            leaderboard: *EVENT
-            column_group: *FULL
+            leaderboard: *ALL
+            column_group: *EVENT_FULL
             label: P
             rank: 2
         EVENT_recall:
-            leaderboard: *EVENT
-            column_group: *FULL
+            leaderboard: *ALL
+            column_group: *EVENT_FULL
             label: R
             rank: 3
         EVENT_SPAN_f1:
-            leaderboard: *EVENT
-            column_group: *SPAN
+            leaderboard: *ALL
+            column_group: *EVENT_SPAN
             label: F1
             rank: 4
         EVENT_SPAN_precision:
-            leaderboard: *EVENT
-            column_group: *SPAN
+            leaderboard: *ALL
+            column_group: *EVENT_SPAN
             label: P
             rank: 5
         EVENT_SPAN_recall:
-            leaderboard: *EVENT
-            column_group: *SPAN
+            leaderboard: *ALL
+            column_group: *EVENT_SPAN
             label: R
             rank: 6
         EVENT_ContextualModality_f1:
-            leaderboard: *EVENT
-            column_group: *MODALITY
+            leaderboard: *ALL
+            column_group: *EVENT_MODALITY
             label: F1
             rank: 7
         EVENT_ContextualModality_precision:
-            leaderboard: *EVENT
-            column_group: *MODALITY
+            leaderboard: *ALL
+            column_group: *EVENT_MODALITY
             label: P
             rank: 8
         EVENT_ContextualModality_recall:
-            leaderboard: *EVENT
-            column_group: *MODALITY
+            leaderboard: *ALL
+            column_group: *EVENT_MODALITY
             label: R
             rank: 9
         EVENT_Degree_f1:
-            leaderboard: *EVENT
-            column_group: *DEGREE
+            leaderboard: *ALL
+            column_group: *EVENT_DEGREE
             label: F1
             rank: 10
         EVENT_Degree_precision:
-            leaderboard: *EVENT
-            column_group: *DEGREE
+            leaderboard: *ALL
+            column_group: *EVENT_DEGREE
             label: P
             rank: 11
         EVENT_Degree_recall:
-            leaderboard: *EVENT
-            column_group: *DEGREE
+            leaderboard: *ALL
+            column_group: *EVENT_DEGREE
             label: R
             rank: 12
         EVENT_Polarity_f1:
-            leaderboard: *EVENT
-            column_group: *POLARITY
+            leaderboard: *ALL
+            column_group: *EVENT_POLARITY
             label: F1
             rank: 13
         EVENT_Polarity_precision:
-            leaderboard: *EVENT
-            column_group: *POLARITY
+            leaderboard: *ALL
+            column_group: *EVENT_POLARITY
             label: P
             rank: 14
         EVENT_Polarity_recall:
-            leaderboard: *EVENT
-            column_group: *POLARITY
+            leaderboard: *ALL
+            column_group: *EVENT_POLARITY
             label: R
             rank: 15
         EVENT_Type_f1:
-            leaderboard: *EVENT
-            column_group: *TYPE
+            leaderboard: *ALL
+            column_group: *EVENT_TYPE
             label: F1
             rank: 16
         EVENT_Type_precision:
-            leaderboard: *EVENT
-            column_group: *TYPE
+            leaderboard: *ALL
+            column_group: *EVENT_TYPE
             label: P
             rank: 17
         EVENT_Type_recall:
-            leaderboard: *EVENT
-            column_group: *TYPE
+            leaderboard: *ALL
+            column_group: *EVENT_TYPE
             label: R
             rank: 18
 
         # temporal relations
         EVENT_DocTimeRel_f1:
-            leaderboard: *RELATION
-            column_group: *DOCTIME
+            leaderboard: *ALL
+            column_group: *RELATION_DOCTIME
             label: F1
             rank: 4
         EVENT_DocTimeRel_precision:
-            leaderboard: *RELATION
-            column_group: *DOCTIME
+            leaderboard: *ALL
+            column_group: *RELATION_DOCTIME
             label: P
             rank: 5
         EVENT_DocTimeRel_recall:
-            leaderboard: *RELATION
-            column_group: *DOCTIME
+            leaderboard: *ALL
+            column_group: *RELATION_DOCTIME
             label: R
             rank: 6
         TLINK_Type_CONTAINS_f1:
-            leaderboard: *RELATION
-            column_group: *CONTAINS
+            leaderboard: *ALL
+            column_group: *RELATION_CONTAINS
             label: F1
             rank: 1
         TLINK_Type_CONTAINS_precision:
-            leaderboard: *RELATION
-            column_group: *CONTAINS
+            leaderboard: *ALL
+            column_group: *RELATION_CONTAINS
             label: P
             rank: 2
         TLINK_Type_CONTAINS_recall:
-            leaderboard: *RELATION
-            column_group: *CONTAINS
+            leaderboard: *ALL
+            column_group: *RELATION_CONTAINS
             label: R
             rank: 3
